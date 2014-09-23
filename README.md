@@ -10,7 +10,8 @@ L'animation du logo en svg se trouve dans *SkrollrTest*
 ![Page d'accueil](https://raw.githubusercontent.com/hepl-3infogra-quelu/portfolio/master/Graphic/home.jpg)
 
 ##To Do
-* Intégrer les templates
-* Incorporer l'animation du logo
-* Incorporer l'effet de parallaxe
-* Gestionnaire de page de projets
+* [ ] Intégrer les templates
+* [x] Faire l'animation du logo
+* [ ] Incorporer l'animation du logo
+* [ ] Incorporer l'effet de parallaxe
+* [ ] Gestionnaire de page de projets
