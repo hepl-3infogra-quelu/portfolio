@@ -1,0 +1,8 @@
+#logo {
+	position: fixed;
+	top: 100px;
+	left: 500px;
+}
+body {
+	min-height: 1500px;
+}
