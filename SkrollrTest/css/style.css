@@ -1,8 +1,7 @@
 #logo {
-	position: fixed;
-	top: 100px;
-	left: 500px;
+    margin: 750px auto 0 auto;
+    display: block;
 }
 body {
-	min-height: 1500px;
+	min-height: 2500px;
 }
