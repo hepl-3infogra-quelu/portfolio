@@ -1,5 +1,32 @@
 @import base
 
-@include h5bp-normalize
-@include h5bp-media
++border-box-sizing
 
+body
+    font-family: 'Merriweather Sans', sans-serif
+
+.row
+    +container(960px)
+
+.header
+    background-image: url(../img/header-bg.png)
+    background-position: center center
+    height: 900px
+    padding: 50px 0 0 0
+
+.header-logo
+    +span(2 of 16)
+    background-image: url(../img/logo.png)
+    background-repeat: no-repeat
+    height: 70px
+    text-indent: 9999px
+
+.header-menu
+    +span(14 of 16 last)
+    text-align: right
+    line-height: 70px
+    a
+        color: #fff
+        text-decoration: none
+        text-transform: uppercase
+        margin: 0 0 0 60px
