@@ -6,27 +6,68 @@ body
     font-family: 'Merriweather Sans', sans-serif
 
 .row
-    +container(960px)
+    +container($width)
+    min-width: $width
 
 .header
+    min-width: $width
     background-image: url(../img/header-bg.png)
     background-position: center center
-    height: 900px
     padding: 50px 0 0 0
+
+.header--fix
+    position: fixed
+    height: 65px
 
 .header-logo
     +span(2 of 16)
-    background-image: url(../img/logo.png)
-    background-repeat: no-repeat
+    background: url(../img/logo.png) center center no-repeat
     height: 70px
     text-indent: 9999px
+    margin: 0 0 60px 0
+
+.menuLink
+    color: #fff
+    padding: 10px
+    text-decoration: none
+    text-transform: uppercase
+    &:hover
+        text-decoration: underline
 
 .header-menu
     +span(14 of 16 last)
     text-align: right
     line-height: 70px
     a
+        margin: 0 0 0 70px
+
+.header-about
+    clear: both
+    h1
+        +single-text-shadow(1px, 1px, 2px, false, #000)
+        font-size: 3em
+        font-weight: bold
         color: #fff
-        text-decoration: none
-        text-transform: uppercase
-        margin: 0 0 0 60px
+        margin: 0 0 60px
+    h2
+        @extend h1
+        font-size: 3em
+        font-weight: normal
+        margin: 0 0 50px 60px
+
+.menu
+    text-align: center
+    height: 150px
+    width: $width
+    position: absolute
+    bottom: 0
+    a
+        position: relative
+        top: -125px
+        margin: 0 40px
+.menu--fix
+    position: fixed
+    top: -50px
+    background: url(../img/header-bg.png) center bottom no-repeat
+    a
+        opacity: 1

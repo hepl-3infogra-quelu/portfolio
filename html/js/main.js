@@ -1,1 +1,56 @@
+(function () {
+	/**
+	 * Renvoie le scrollTop de la page
+	 * @return {number} Valeur du scrollTop
+	 */
+	function get_scrollTop() {
+		if (typeof pageYOffset != 'undefined') {
+			//most browsers except IE before #9
+			return pageYOffset;
+		} else {
+			var B = document.body; //IE 'quirks'
+			var D = document.documentElement; //IE with doctype
+			D = (D.clientHeight) ? D : B;
+			return D.scrollTop;
+		}
+	}
 
+	/**
+	 * Renvoie la hauteur de l'écran de navigation
+	 * @return {number} Hauteur de l'écran
+	 */
+	function get_height() {
+		if (typeof (window.innerWidth) == 'number')
+			return window.innerHeight;
+		else if (document.documentElement && document.documentElement.clientHeight)
+			return document.documentElement.clientHeight;
+	}
+
+	/**
+	 * Met à jour la hauteur des éléments en fonction de la hauteur de l'écran
+	 */
+	function update_height() {
+		var oElements = document.getElementsByClassName('height');
+		var _i = -1,
+			oElement, element;
+		for (; oElement = oElements[++_i];) {
+			oElement.style.height = get_height() + "px";
+		};
+	}
+
+	window.onload = function () {
+		update_height()
+	};
+	window.onresize = function () {
+		update_height()
+	};
+
+	window.onscroll = function () {
+		if (get_scrollTop() > get_height() - 100) {
+			document.getElementById("menu").classList.add("menu--fix");
+		} else {
+			document.getElementById("menu").classList.remove("menu--fix");
+		}
+	};
+
+})();
