@@ -1,5 +1,6 @@
 @import base
 
+$local-keywords: (border-box)
 +border-box-sizing
 
 body
@@ -80,10 +81,11 @@ body
     font-family: 'Merriweather', serif
     +clearfix()
     article
+        margin: 100px auto
         text-align: center
         h2
             font-size: 3em
-            margin: 1em 0
+            margin-bottom: 1em
         p
             font-size: 1.4em
             line-height: 2em
@@ -96,12 +98,28 @@ body
         +pre(7 of 16)
         +span(9 of 16 last)
         color: #fff
-        margin: 100px auto
-
 
 .home--graph
     article
-        +span(1 of 1)
+        ul
+            +clearfix()
+            margin-bottom: 2em
+            text-align: center
+            li
+                float: left
+                margin-right: 13px
+                & .home--graph__carre
+                    +span(3 of 16)
+                & .home--graph__rectangle
+                    +span(7 of 16)
+                figure
+                    height: 200px
+                    background: #e0e0e0
+                    img
+                        height: 100%
+                        padding: 20px
+                &+li+li+li
+                    +span(last)
 
 .home--photo
     article

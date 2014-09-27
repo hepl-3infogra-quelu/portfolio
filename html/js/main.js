@@ -32,25 +32,41 @@
 	function update_height() {
 		var oElements = document.getElementsByClassName('height');
 		var _i = -1,
-			oElement, element;
+			oElement;
 		for (; oElement = oElements[++_i];) {
 			oElement.style.height = get_height() + "px";
 		};
 	}
 
+	function getRatio(imgElement) {
+		return imgElement.width / imgElement.height;
+	}
+
+	function updateRatioClass() {
+		var imgLogos = document.querySelectorAll(".home--graph-logo");
+		var _i = -1,
+			imgLogo;
+		for (; imgLogo = imgLogos[++_i];) {
+			if (getRatio(imgLogo) > 1)
+				imgLogo.parentElement.parentElement.classList.add("home--graph__rectangle");
+			else
+				imgLogo.parentElement.parentElement.classList.add("home--graph__carre");
+		}
+	}
+
 	window.onload = function () {
-		update_height()
-	};
+		update_height();
+		updateRatioClass();
+	}
 	window.onresize = function () {
 		update_height()
 	};
 
 	window.onscroll = function () {
-		if (get_scrollTop() > get_height() - 100) {
+		if (get_scrollTop() > get_height() - 100)
 			document.getElementById("menu").classList.add("menu--fix");
-		} else {
+		else
 			document.getElementById("menu").classList.remove("menu--fix");
-		}
 	};
 
 })();
