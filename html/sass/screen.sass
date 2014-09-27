@@ -13,7 +13,7 @@ body
     min-width: $width
     background-image: url(../img/header-bg.png)
     background-position: center center
-    padding: 50px 0 0 0
+    padding-top: 50px
 
 .header--fix
     position: fixed
@@ -21,12 +21,12 @@ body
 
 .header-logo
     +span(2 of 16)
-    background: url(../img/logo.png) center center no-repeat
+    background: url(../img/logo.png) no-repeat center center
     height: 70px
     text-indent: 9999px
-    margin: 0 0 60px 0
+    margin-bottom: 60px
 
-.menuLink
+.menu--link
     color: #fff
     padding: 10px
     text-decoration: none
@@ -39,7 +39,7 @@ body
     text-align: right
     line-height: 70px
     a
-        margin: 0 0 0 70px
+        margin-left: 70px
 
 .header-about
     clear: both
@@ -48,12 +48,13 @@ body
         font-size: 3em
         font-weight: bold
         color: #fff
-        margin: 0 0 60px
+        margin-bottom: 60px
     h2
         @extend h1
         font-size: 3em
         font-weight: normal
-        margin: 0 0 50px 60px
+        margin-bottom: 50px
+        margin-left: 60px
 
 .menu
     text-align: center
@@ -61,13 +62,54 @@ body
     width: $width
     position: absolute
     bottom: 0
+    z-index: 1
     a
         position: relative
         top: -125px
         margin: 0 40px
+
 .menu--fix
     position: fixed
     top: -50px
     background: url(../img/header-bg.png) center bottom no-repeat
     a
         opacity: 1
+
+.home
+    font-family: 'Merriweather', serif
+    +clearfix()
+    article
+        text-align: center
+        h2
+            font-size: 3em
+            margin: 1em 0
+        p
+            font-size: 1.4em
+            line-height: 2em
+
+.home--dev
+    background: url(../img/dev.png) repeat-x 20% 100%
+    @media screen and (max-width: 960px)
+        background: url(../img/dev-bg.png)
+    article
+        +pre(7 of 16)
+        +span(9 of 16 last)
+        color: #fff
+        margin: 100px auto
+
+
+.home--graph
+    article
+        +span(1 of 1)
+
+.home--photo
+    article
+        +span(9 of 16)
+
+.home--divider
+    height: 500px
+    +clearfix()
+    img
+        position: relative
+        bottom: 25%
+        z-index: 0

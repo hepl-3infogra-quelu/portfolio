@@ -22,10 +22,10 @@
             <section class="row">
                 <h1 class="header-logo"></h1>
                 <nav class="header-menu">
-                    <a href="#" class="menuLink">A propos</a>
-                    <a href="#" class="menuLink">Travaux</a>
-                    <a href="#" class="menuLink">Blog</a>
-                    <a href="#" class="menuLink">Contact</a>
+                    <a href="#" class="menu--link">A propos</a>
+                    <a href="#" class="menu--link">Travaux</a>
+                    <a href="#" class="menu--link">Blog</a>
+                    <a href="#" class="menu--link">Contact</a>
                 </nav>
                 <div class="header-about">
                     <h1>Luc Matagne</h1>
@@ -34,72 +34,51 @@
                     <h2>Photographe</h2>
                 </div>
             <nav class="menu" id="menu">
-                <a href="#" class="menuLink">A propos</a>
-                <a href="#" class="menuLink">Travaux</a>
+                <a href="#" class="menu--link">A propos</a>
+                <a href="#" class="menu--link">Travaux</a>
                 <svg id="logoSVG" height="230" width="230">
-                    <circle cx="115" cy="115" r="115" fill="#2ecc71" >
+                    <circle cx="115" cy="115" r="115" fill="#2ecc71" ></circle>
                     <g transform="translate(200,150), matrix(.8,0,0,-.8,0,0)">
                         <path
                          d="m 0,0 c -0.764,4.354 -1.424,9.109 -1.976,14.265 -0.556,5.152 -1.076,10.426 -1.56,15.829 -0.49,5.398 -1.147,10.244 -1.981,14.54 -0.83,4.293 -1.975,7.699 -3.431,10.215 -1.457,2.514 -3.367,3.526 -5.725,3.038 -2.08,-0.492 -4.197,-1.689 -6.347,-3.59 -2.155,-1.904 -4.269,-4.172 -6.35,-6.811 -2.08,-2.639 -4.094,-5.429 -6.035,-8.374 -1.944,-2.944 -3.746,-5.645 -5.411,-8.097 -0.279,-0.369 -0.556,0.09 -0.832,1.38 -0.28,1.288 -0.556,3.004 -0.833,5.153 -0.282,2.145 -0.521,4.601 -0.727,7.362 -0.211,2.76 -0.418,5.399 -0.625,7.914 -0.21,2.515 -0.386,4.723 -0.521,6.627 -0.14,1.901 -0.209,3.097 -0.209,3.589 -0.416,4.785 -1.113,8.743 -2.081,11.872 -0.972,3.129 -3.122,4.57 -6.453,4.326 -2.913,-1.105 -5.62,-3.13 -8.117,-6.075 -2.496,-2.945 -4.718,-6.197 -6.66,-9.754 -1.944,-3.561 -3.642,-7.18 -5.099,-10.861 -1.457,-3.68 -2.465,-6.809 -3.018,-9.387 0.137,4.906 0.345,9.232 0.625,12.976 0.276,3.742 0.519,7.272 0.728,10.584 0.208,3.313 0.416,6.471 0.625,9.48 0.208,3.006 0.312,6.226 0.312,9.663 0,1.104 -0.072,2.852 -0.208,5.246 -0.14,2.392 -0.453,4.785 -0.938,7.178 -0.487,2.393 -1.144,4.57 -1.976,6.534 -0.832,1.962 -1.873,3.13 -3.123,3.498 -2.08,0.735 -4.094,0.888 -6.035,0.459 -1.945,-0.431 -4.199,-1.264 -5.829,-2.3 -1.186,-0.755 -1.04,-1.229 -3.538,-3.682 -2.498,-2.456 -5.411,-6.013 -8.74,-10.675 -2.778,-3.929 -5.516,-8.467 -8.223,-13.621 -2.704,-5.154 -5.246,-10.276 -7.596,-15.37 -5.354,-11.607 -24.815,-56.812 -27.329,-58.08 -2.514,-1.269 -12.204,-4.972 -21.925,-6.821 -9.721,-1.848 -16.002,-1.98 -19.28,-2.307 -3.283,-0.326 -6.21,-0.111 -8.779,0.647 -2.573,0.756 -4.396,2.373 -5.473,4.85 -0.089,1.971 0.354,4.984 1.327,9.032 0.969,4.05 2.244,8.699 3.829,13.953 1.583,5.253 3.451,10.91 5.604,16.975 2.149,6.061 4.359,12.165 6.63,18.31 2.268,6.143 4.497,12.133 6.691,17.971 2.19,5.836 4.167,11.097 5.926,15.777 1.758,4.682 3.233,8.645 4.419,11.896 1.188,3.25 1.879,5.377 2.078,6.379 -1.308,0.802 -2.446,1.313 -3.42,1.535 -0.98,0.221 -1.906,0.314 -2.779,0.277 -0.878,-0.036 -1.716,-0.159 -2.522,-0.368 -0.809,-0.208 -1.694,-0.345 -2.659,-0.402 -0.253,-1.111 -0.704,-3.225 -1.354,-6.334 -0.649,-3.112 -1.835,-7.739 -3.562,-13.883 -1.725,-6.145 -4.15,-13.964 -7.266,-23.46 -3.12,-9.496 -7.248,-21.13 -12.384,-34.897 -1.777,-5.02 -3.336,-9.456 -4.676,-13.318 -1.344,-3.86 -2.471,-7.384 -3.39,-10.564 -0.919,-3.181 -1.549,-6.027 -1.891,-8.538 -0.344,-2.508 -0.283,-4.986 0.189,-7.426 2.224,-3.889 4.863,-6.121 7.912,-6.711 3.046,-0.588 7.044,-0.763 11.992,-0.526 2.219,0.384 4.894,1.053 8.029,2.007 3.13,0.953 11.368,2.17 18.811,3.682 7.444,1.512 19.746,7.585 22.621,9.563 0.359,0.092 23.496,46.518 25.233,50.935 1.733,4.417 3.85,9.172 6.348,14.265 2.497,5.09 5.166,9.938 8.013,14.54 2.841,4.602 5.828,8.588 8.95,11.965 3.122,3.373 6.208,5.613 9.263,6.718 0.691,0.121 1.108,0.184 1.249,0.184 0.134,0 0.134,-0.063 0,-0.184 -0.141,-0.124 -0.314,-0.276 -0.522,-0.461 -0.208,-0.183 -0.243,-0.338 -0.103,-0.459 0.415,-2.701 0.691,-6.414 0.832,-11.137 0.135,-4.725 0.208,-9.45 0.208,-14.172 0,-4.725 -0.036,-8.928 -0.105,-12.608 -0.071,-3.681 -0.103,-5.707 -0.103,-6.074 0,-2.945 -0.037,-5.43 -0.104,-7.454 -0.071,-2.025 -0.176,-4.45 -0.313,-7.271 0,-3.193 -0.036,-5.952 -0.104,-8.283 -0.072,-2.333 -0.176,-4.724 -0.311,-7.179 -0.14,-2.455 -0.281,-5.216 -0.417,-8.282 -0.14,-3.069 -0.416,-6.873 -0.832,-11.412 0,-0.247 -0.105,-1.565 -0.313,-3.958 -0.208,-2.391 -0.453,-5.124 -0.728,-8.19 -0.28,-3.068 -0.556,-6.014 -0.832,-8.835 -0.282,-2.824 -0.489,-4.849 -0.625,-6.073 2.357,-1.962 4.091,-3.343 5.204,-4.143 1.107,-0.797 2.704,-1.132 4.786,-1.011 -0.281,3.804 -0.488,7.085 -0.625,9.846 -0.139,2.762 -0.207,5.338 -0.207,7.732 0,2.392 0.102,4.814 0.313,7.269 0.207,2.454 0.446,5.338 0.728,8.653 0.415,2.207 0.692,4.417 0.832,6.625 0.135,2.208 0.519,4.876 1.143,8.006 0.626,3.128 1.667,6.932 3.124,11.411 1.457,4.479 3.571,10.032 6.347,16.659 0.277,0.857 0.97,2.208 2.081,4.049 1.11,1.841 2.322,3.709 3.644,5.614 1.317,1.902 2.67,3.527 4.058,4.877 1.386,1.349 2.498,1.962 3.329,1.842 0.694,-2.209 1.319,-5.462 1.874,-9.756 0.553,-4.297 1.005,-9.082 1.352,-14.357 0.347,-5.277 0.625,-10.707 0.834,-16.29 0.208,-5.584 0.344,-10.766 0.415,-15.553 0.069,-4.785 0.069,-8.806 0,-12.055 -0.071,-3.253 -0.176,-5.185 -0.311,-5.799 1.248,-1.104 2.044,-2.056 2.393,-2.852 0.345,-0.799 1.214,-1.013 2.602,-0.644 0.277,5.153 0.901,10.091 1.873,14.816 0.97,4.722 2.009,8.435 3.122,11.137 0.137,0.368 0.52,1.5 1.145,3.404 0.625,1.903 1.664,4.235 3.121,6.994 1.458,2.761 3.399,5.859 5.828,9.295 2.427,3.435 5.517,6.995 9.263,10.676 0.97,0.981 1.593,1.317 1.872,1.013 0.276,-0.308 0.762,-0.461 1.457,-0.461 0.97,-0.246 1.803,-1.505 2.498,-3.773 0.694,-2.271 1.281,-5.153 1.769,-8.651 0.485,-3.497 0.866,-7.302 1.145,-11.411 0.278,-4.113 0.554,-8.07 0.834,-11.873 C -7.737,6.41 -7.492,3.005 -7.284,0 c 0.207,-3.009 0.519,-5.126 0.937,-6.352 1.664,-0.858 3.189,-1.839 4.578,-2.944 1.386,-1.104 3.05,-1.289 4.996,-0.552 C 1.838,-7.64 0.762,-4.357 0,0"
-                         data-start="stroke-dashoffset:6000" data-end="stroke-dashoffset:0"
+                         data--200-bottom="stroke-dashoffset:6000; opacity:0" data-end="stroke-dashoffset:0; opacity:100"
                          style="fill:none;stroke:#fff;stroke-width:14;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:6000;stroke-dashoffset:0" id="path26" ></g>
                 </svg>
-                <a href="#" class="menuLink">Blog</a>
-                <a href="#" class="menuLink">Contact</a>
+                <a href="#" class="menu--link">Blog</a>
+                <a href="#" class="menu--link">Contact</a>
             </nav>
             </section>
         </header>
-        <section>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium corporis at in soluta dolore est, autem placeat sed inventore impedit quis rem aspernatur iusto repudiandae saepe, fugit illo ullam tenetur.</div>
-            <div>Voluptate sint quis nihil voluptatibus illum minus sequi libero a consectetur quam consequatur amet obcaecati culpa necessitatibus, numquam dolorem aspernatur, saepe ullam laboriosam maiores velit explicabo reprehenderit natus. Sequi, labore.</div>
-            <div>Eveniet at labore accusamus nihil eius quisquam fuga. Perferendis itaque ducimus natus modi, alias amet doloribus nemo fuga voluptate vero aliquid labore mollitia a deserunt, sequi voluptates officiis quaerat. Sequi.</div>
-            <div>Quibusdam ex ipsa, obcaecati magni ipsum ratione dicta repellendus natus eligendi. Doloremque illum placeat magni fugiat laborum quia culpa debitis, velit deleniti. Repudiandae, architecto esse quas provident fuga qui quos.</div>
-            <div>In eum iusto dignissimos, consequatur, labore amet libero eveniet beatae dicta quia nostrum iure omnis, ratione necessitatibus quis laborum, commodi non. Delectus similique placeat iure doloribus reprehenderit beatae ad nihil.</div>
-            <div>Est quisquam a consectetur, vel officia natus suscipit animi, doloribus recusandae quasi nostrum illo magnam nulla sequi at deserunt fugit, corporis praesentium rem ullam, tempora velit mollitia unde. Officia, repellendus.</div>
-            <div>Reiciendis ipsa quo eos eius officiis, non aut quaerat autem eveniet sed libero doloribus voluptatum, architecto alias vel possimus, iure, laudantium ad. Officiis cupiditate quisquam, nemo ipsa cum fuga fugiat?</div>
-            <div>Dicta exercitationem sint molestias repellendus mollitia cum. Voluptatum molestiae velit veritatis expedita rem illum praesentium magni accusamus laudantium quaerat animi explicabo, eos ad nemo, pariatur, neque dolore corporis fugit dicta.</div>
-            <div>Explicabo, numquam nihil eveniet quo at. Quaerat saepe ipsa corporis illum placeat, odio suscipit rerum! Laborum, aliquid commodi? Iusto enim voluptatum sunt consequuntur fugit at aliquam, minus, hic maiores molestiae.</div>
-            <div>Maiores obcaecati debitis, quaerat ipsum dolore temporibus, minima, ullam suscipit eaque facere fuga ea beatae amet voluptatibus quidem sit quia commodi veniam voluptate recusandae asperiores accusantium reprehenderit corrupti? Sunt, ratione!</div>
-            <div>Temporibus soluta explicabo sequi impedit dolore vitae iste ab, repellat similique eaque eveniet quibusdam, excepturi, atque! Nulla ut quos porro quo quis? Perspiciatis accusamus numquam magni error. Assumenda consequatur, ab!</div>
-            <div>Nisi quasi, tempora nesciunt illo nihil odit! Illo tempore facilis provident, impedit autem porro repellat praesentium accusamus, sunt perferendis laborum tenetur amet facere vitae laboriosam similique! A, harum. Voluptates, cum?</div>
-            <div>Tempore culpa hic temporibus, molestiae libero nemo ab alias quia dicta ex officiis tempora saepe explicabo ut distinctio adipisci. Impedit expedita et eius ad! Laborum rerum rem neque minus debitis?</div>
-            <div>Dolorem excepturi exercitationem totam fuga voluptas aliquid animi adipisci assumenda mollitia autem, earum blanditiis alias molestias expedita fugit dignissimos ipsam quisquam suscipit vero optio est dolorum. Veritatis voluptatibus vel molestias.</div>
-            <div>Nulla quo quidem nisi distinctio architecto illo quis molestiae laudantium modi possimus dolores vel laborum, fugit enim numquam! Sint, expedita dolor beatae, iste amet magni neque harum fugit accusantium iure.</div>
-            <div>Inventore praesentium perspiciatis ipsum autem aut, accusamus tenetur et aliquid eius. Laudantium at, eveniet atque harum nesciunt autem eaque enim pariatur libero magnam odit odio, error voluptate asperiores cupiditate quisquam.</div>
-            <div>Earum temporibus nostrum, accusamus nihil veniam ipsum dolores libero. Dicta deserunt, tempore. Quis doloremque soluta tempora pariatur ab, ut, cumque repudiandae accusantium reiciendis, deleniti, architecto ipsa vitae vel maiores? Libero?</div>
-            <div>Rem rerum vero hic repudiandae deserunt ad beatae error enim similique odio nesciunt quod dignissimos a, architecto sit nostrum vitae veniam voluptatem cumque vel pariatur aperiam libero? Voluptas, similique, repellendus.</div>
-            <div>Doloribus nemo similique, suscipit pariatur provident dignissimos quibusdam saepe sapiente ipsum. Corporis pariatur tenetur sapiente perspiciatis at recusandae eligendi, necessitatibus officia similique voluptatum a deleniti dicta cupiditate quas ea possimus?</div>
-            <div>Voluptatibus molestias accusamus, quidem deserunt ea eligendi vel culpa reiciendis voluptatem ducimus ex hic omnis qui dolorem, error corporis. Distinctio asperiores dolorem reprehenderit atque itaque, beatae fugiat, cupiditate molestiae velit.</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem pariatur mollitia impedit. Voluptates rem facere, consequatur quod et necessitatibus esse unde inventore consectetur totam maxime, iste quidem repellat eos placeat.</div>
-            <div>Minima quod corrupti, rem labore vero modi possimus animi cupiditate cum, illum autem cumque rerum vel eaque similique! Ratione minus libero sapiente perspiciatis, est nihil nemo, quia ducimus ipsa fugit.</div>
-            <div>Voluptatem, aut, quia neque ratione veritatis ab ad. Alias rem eaque ducimus blanditiis a vero delectus asperiores veniam tenetur, temporibus nemo aspernatur voluptate. Est odio sint nesciunt consequatur reiciendis non!</div>
-            <div>Aliquam quibusdam iusto sequi repellat, labore, assumenda voluptas aut aliquid dicta rem architecto fugit eos nulla iure ducimus deserunt inventore, nam in impedit neque ea! Atque quaerat hic est fugiat.</div>
-            <div>Dignissimos, voluptates similique, aspernatur, modi ducimus minima quae repellendus atque fuga reiciendis porro et! Fugit unde vero, illum cumque dolore ipsa, magnam, doloremque autem deserunt ut velit ab, possimus sint.</div>
-            <div>Numquam, dolores, quas natus temporibus tempore asperiores ab. Rerum accusamus facere vero ab facilis, voluptatum iusto asperiores maxime voluptates veniam, quibusdam ex hic modi impedit eveniet. Fugiat, delectus beatae reiciendis!</div>
-            <div>Eos quod repellat minima eum quaerat nostrum maiores! Fuga qui sed, commodi expedita laboriosam, praesentium cum eveniet provident facere ipsa, omnis. Incidunt ut soluta, aut sapiente. Blanditiis exercitationem et quia!</div>
-            <div>Tempora eligendi dolores quae corporis ducimus similique dignissimos ab hic quidem ex ea quaerat atque error enim nihil aliquam, eaque optio officia, voluptatum earum laboriosam nesciunt reiciendis neque? Possimus, corporis!</div>
-            <div>Sint corporis perferendis non sequi fugiat tempora minima dignissimos, officia expedita! Rerum, ratione consequuntur voluptatibus dolorem quos molestias culpa adipisci unde fuga eligendi placeat asperiores, nobis qui illum itaque laboriosam?</div>
-            <div>Dolorum officia consequatur libero, a veritatis numquam! Laudantium nemo amet cupiditate iusto atque explicabo inventore, minus impedit odit exercitationem, fuga molestiae, ducimus deleniti alias tempora eveniet rerum nisi dolore ipsa!</div>
-            <div>Cum nobis sed, aliquid soluta nemo! Dolorem possimus, tenetur recusandae. Voluptas doloremque repellendus, recusandae ullam aspernatur perferendis ratione maiores, totam animi quae obcaecati eveniet. Tempora, consequatur soluta voluptatibus ipsum sequi!</div>
-            <div>Maxime, ad quae incidunt enim minus consequatur sapiente ducimus ex! Earum nihil, explicabo accusamus cumque! Dolorum commodi aliquam sunt neque veniam maiores distinctio reiciendis vel! Dolores, aliquam vero illo voluptates?</div>
-            <div>Eligendi molestias laborum quam modi doloremque numquam sit sequi repellat ut. Veniam assumenda animi id voluptatum alias saepe nostrum cupiditate voluptas iste sit quibusdam dolor ipsam dignissimos, et magni possimus.</div>
-            <div>Voluptas commodi alias eaque beatae sint impedit blanditiis id. Aliquam modi veritatis esse, nostrum natus rem velit dicta mollitia. Similique dolorum, tempora consequatur quas culpa id, dolores. Error, molestiae, ab.</div>
-            <div>Nisi eaque consequuntur maiores repellendus officiis fuga placeat, cum. Neque officia, eum iusto numquam a omnis assumenda doloremque, placeat quisquam laudantium vero. Officiis adipisci soluta enim ipsam nam, numquam cumque.</div>
-            <div>Officiis natus, a neque nemo tempore. Enim nam aperiam animi, vitae repudiandae, temporibus, voluptatibus delectus corporis fuga ea ipsam. Explicabo reprehenderit ducimus laboriosam, fugit omnis deleniti aliquam cupiditate maiores! Deserunt!</div>
-            <div>Ipsa unde ab corporis velit aut, rem! Porro mollitia placeat deserunt nesciunt voluptate quia, adipisci voluptatum error sequi nemo? Ipsam libero sed nihil necessitatibus voluptatum hic, laborum beatae ut repellendus.</div>
-            <div>Nostrum, obcaecati quo aperiam ad odio ducimus, ex laboriosam incidunt doloribus aspernatur tempore sed quasi, molestiae reprehenderit esse porro mollitia. Veritatis id pariatur, iusto voluptatum culpa, aspernatur perspiciatis corporis sed!</div>
-            <div>Quasi, deserunt sit minima quia natus quisquam deleniti placeat totam quae obcaecati impedit consequatur unde sapiente iure, accusantium ipsum minus, iste, quaerat quis corporis enim mollitia exercitationem. Adipisci, quidem error.</div>
-            <div>Optio, dolor! Corporis aliquid numquam nam voluptatum eius dicta obcaecati eaque repellat, delectus dolores quasi iusto non rerum dolor, reprehenderit harum id excepturi ab perferendis nemo adipisci necessitatibus ratione. Pariatur!</div>
-            <div>Quam expedita doloribus debitis molestias, molestiae. Dolorum reiciendis dolores explicabo adipisci, harum, consequatur tempora, dolore eligendi repudiandae placeat excepturi mollitia at facere provident sequi sapiente repellendus. Voluptate ratione, iure nobis?</div>
-            <div>Voluptate nostrum aut, porro voluptates! Laborum, saepe! Minima facilis, nihil maiores non porro inventore consectetur consequatur sequi iusto neque saepe doloremque excepturi deleniti, asperiores accusantium quae, qui ducimus sed in.</div>
-            <div>Est laborum ea quidem molestias, ut inventore deserunt ullam cupiditate aperiam fugiat earum sunt iusto quaerat culpa qui esse, voluptas illum. Veniam ex suscipit harum numquam itaque, perspiciatis alias eveniet!</div>
-            <div>Ipsa, ab, doloribus. Numquam repudiandae accusamus, praesentium, magni ut quas cum vitae maiores error omnis harum fugiat cupiditate quam. Sit laborum dolores fugiat minima voluptatibus, aspernatur, dolorum cupiditate omnis non.</div>
-            <div>Dolor aperiam optio, debitis modi suscipit deleniti reprehenderit ipsa quidem recusandae dolorem deserunt expedita consequuntur consectetur, voluptas omnis culpa unde beatae! Nihil similique ab qui itaque sapiente rem fuga ea.</div>
-            <div>Maiores voluptas nulla magni iste iusto eum incidunt blanditiis velit enim cum voluptatibus neque quidem eius accusamus porro provident consequatur, rerum tenetur voluptatem soluta molestias consectetur, omnis. Expedita, hic, tempore.</div>
-            <div>Error ipsum ullam, sapiente. Necessitatibus magnam vero commodi dignissimos nesciunt nostrum corporis, neque. Consequatur velit odit ducimus beatae officiis, voluptate consectetur cumque. Iste a odit quaerat, veritatis similique, excepturi nam?</div>
-            <div>Ab voluptatem ipsam et sequi doloremque maiores deserunt, nobis sapiente modi atque reprehenderit, in expedita eligendi accusamus. Vel accusamus, dolore, maxime magnam mollitia incidunt, in libero error sunt quod maiores.</div>
-            <div>Consectetur error aspernatur eveniet repudiandae aliquid deleniti officia sequi necessitatibus reprehenderit perferendis autem dolore iusto possimus libero quod, accusantium minus rem atque corporis maiores, in? Nihil voluptates a, molestiae repellat.</div>
-            <div>Dicta in aperiam delectus optio quaerat quisquam magnam temporibus, officia pariatur quibusdam consectetur quod ipsam facilis omnis mollitia ad exercitationem qui voluptatibus saepe. Cum laudantium impedit dolorem harum repellendus. Harum!</div>
+
+        <section class="home home--dev" data-200-bottom="background-position: 20% 100%" data--1000-top="background-position: 20% 50%">
+            <article>
+                <h2>Le développement web</h2>
+                <p>Je réalise des sites web de A à Z !</p>
+                <p>Sur base de votre demande je vous crée votre propre site Internet adapté à vos besoins mais aussi et surtout à ceux de vos utilisateurs !</p>
+            </article>
+        </section>
+        <div class="home--divider">
+            <img src="misc/img-home/sep01.jpg" alt="Photo shooting homestuck" data-bottom="bottom: 100%" data-top="bottom: 0%">
+        </div>
+
+        <section class="home home--graph row">
+            <article>
+                <h2>Graphisme</h2>
+                <p>Vous avez besoin d'une nouvelle identité graphique ? Un flyer ou une affiche ? </p>
+                <p>Je peux également vous aider dans ce domaine ! ;)</p>
+            </article>
+        </section>
+        <div class="home--divider">
+            <img src="misc/img-home/sep02.jpg" alt="Photo shooting couple" data-bottom="bottom: 45%" data-top="bottom: 50%">
+        </div>
+
+        <section class="home home--photo ">
+            <article>
+                <h2>Photographie & vidéo</h2>
+                <p>Vous organisez un meeting, un événement d'entreprise ou vous êtes sur le point de vous marier? Vous avez besoin d'un photographe pour immortaliser ces moments !</p>
+                <p>Ça tombe bien car je peux vous aider !</p>
+                <p>Mais encore mieux, je réalise aussi des vidéos de qualité professionelle de la prise de vue au montage.</p>
+            </article>
         </section>
         <script src="js/vendor/skrollr.min.js"></script>
         <script type="text/javascript">
