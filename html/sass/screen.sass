@@ -87,13 +87,15 @@ body
             font-size: 3em
             margin-bottom: 1em
         p
-            font-size: 1.4em
+            font-size: 1.2em
             line-height: 2em
 
 .home--dev
     background: url(../img/dev.png) repeat-x 20% 100%
     @media screen and (max-width: 960px)
         background: url(../img/dev-bg.png)
+        article
+            +span(1 of 1)
     article
         +pre(7 of 16)
         +span(9 of 16 last)
@@ -107,7 +109,7 @@ body
             text-align: center
             li
                 float: left
-                margin-right: 13px
+                margin-right: 12px
                 & .home--graph__carre
                     +span(3 of 16)
                 & .home--graph__rectangle
