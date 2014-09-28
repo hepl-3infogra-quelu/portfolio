@@ -65,6 +65,9 @@
 	window.onload = function () {
 		update_height();
 		updateRatioClass();
+		document.getElementById("logoSVG").onclick = function () {
+			window.scroll(0, get_height() - 99);
+		};
 	}
 	window.onresize = function () {
 		update_height()
