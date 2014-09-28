@@ -4,7 +4,6 @@
  */
 
 .menu
-    min-width: $width-large
     text-align: center
     height: 150px
     margin: 0 auto
@@ -13,8 +12,11 @@
     bottom: 0
     z-index: 2
     +single-transition()
-    circle, g
-        cursor: pointer
+    svg
+        width: 230px
+        height: 230px
+        circle, g
+            cursor: pointer
     .menu--link
         position: relative
         top: -125px
@@ -24,6 +26,13 @@
         visibility: hidden
         &:hover
             background-color: rgba(255,255,255,.1)
+    @media screen and (max-width: $width-large)
+        svg
+            +scale(.7, .7)
+            width: 230px
+            height: 230px
+        .menu--link
+            padding: 0 10px
 
 .menu--link
     color: #fff

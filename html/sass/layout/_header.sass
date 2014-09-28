@@ -4,7 +4,6 @@
  */
 
 .header
-    min-width: $width-large
     background-image: url(../img/header-bg.png)
     background-position: center center
     padding-top: 50px
@@ -26,6 +25,8 @@
     line-height: 70px
     a
         margin-left: 70px
+        @media screen and (max-width: $width-large)
+            margin-left: 30px
 
 .header-about
     clear: both
@@ -35,9 +36,17 @@
         font-weight: bold
         color: #fff
         margin-bottom: 60px
+        @media screen and (max-width: $width-large)
+            font-size: 2em
+            margin-bottom: 30px
     h2
         @extend h1
         font-size: 3em
         font-weight: normal
         margin-bottom: 50px
         margin-left: 60px
+        @media screen and (max-width: $width-large)
+            font-size: 2em
+            margin-bottom: 25px
+    @media screen and (max-width: $width-large)
+        padding-left: 40px
