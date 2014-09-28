@@ -6,7 +6,7 @@ $local-keywords: (border-box)
 body
     font-family: 'Merriweather Sans', sans-serif
 
-.row
+.container
     +container($width)
     min-width: $width
 
@@ -64,18 +64,24 @@ body
     width: 100%
     position: absolute
     bottom: 0
-    z-index: 1
-    a
+    z-index: 2
+    +single-transition()
+    .menu--link
         position: relative
         top: -125px
-        margin: 0 40px
+        display: inline-block
+        line-height: 100px
+        padding: 0 40px
+        visibility: hidden
+        &:hover
+            background-color: rgba(255,255,255,.1)
 
 .menu--fix
     position: fixed
     top: -50px
     background: url(../img/header-bg.png) center bottom no-repeat
-    a
-        opacity: 1
+    .menu--link
+        visibility: visible
 
 .home
     font-family: 'Merriweather', serif
@@ -86,6 +92,7 @@ body
         h2
             font-size: 3em
             margin-bottom: 1em
+            line-height: 1.2em
         p
             font-size: 1.2em
             line-height: 2em
@@ -121,16 +128,101 @@ body
                         height: 100%
                         padding: 20px
                 &+li+li+li
-                    +span(last)
+                    margin-right: 0
 
 .home--photo
+    height: 700px
+    figure
+        height: 700px
+        width: 100%
+        position: absolute
+        z-index: 1
+        overflow: hidden
+        video
+            width: 100%
+            background-image: url(../misc/img-home/poster-video.jpg)
     article
         +span(9 of 16)
+        text-align: left
+        position: relative
+        z-index: 1
+        color: #fff
+        +single-text-shadow(1px, 1px, 2px, false, #000)
 
 .home--divider
-    height: 500px
+    height: 400px
     +clearfix()
     img
         position: relative
         bottom: 25%
-        z-index: 0
+        z-index: 1
+
+.form
+    +container(700px)
+    text-align: left
+    color: #b4bbc2
+    .form--input, .form--textarea
+        margin-bottom: 30px
+        label
+            display: block
+            margin-bottom: 15px
+        input, textarea
+            border: 1px solid #b4bbc2
+            padding: 10px
+            width: 100%
+            z-index: -20
+            outline: none
+            height: 45px
+            +border-radius(5px)
+            &:focus
+                border-width: 2px
+    .form--narrow
+        +span(2 of 4)
+        &+.form--narrow
+            margin-right: 0
+    .form--large
+        +span(1 of 1)
+    .form--textarea
+        textarea
+            resize: vertical
+            width: 100%
+            min-height: 140px
+    .form--actions
+        div
+            line-height: 40px
+            float: left
+        input[type=submit]
+            font-weight: bold
+            font-size: 1.1em
+            background-color: #24aa98
+            padding: 15px 30px
+            cursor: pointer
+            float: right
+            color: #fff
+            outline: none
+            +border-radius(10px)
+            border: 0
+
+.footer
+    background-color: #2f2f2f
+    color: #fff
+    text-align: center
+    height: 120px
+    width: 100%
+
+.footer-socials a
+    height: 40px
+    width: 40px
+    display: inline-block
+    text-indent: -9999px
+    margin: 20px 10px
+    &.footer-socials-fb
+        background-image: url(../img/fb-icon.png)
+    &.footer-socials-twitter
+        background-image: url(../img/twitter-icon.png)
+    &.footer-socials-linkedin
+        background-image: url(../img/linkedin-icon.png)
+    &.footer-socials-youtube
+        background-image: url(../img/youtube-icon.png)
+.footer-copyright
+    font-weight: 300

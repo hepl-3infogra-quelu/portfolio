@@ -38,10 +38,18 @@
 		};
 	}
 
+	/**
+	 * Donne le ratio d'une image
+	 * @param  {Image} imgElement Objet image à calculer le ration
+	 * @return {number}            Ratio de l'image
+	 */
 	function getRatio(imgElement) {
 		return imgElement.width / imgElement.height;
 	}
 
+	/**
+	 * Change la classe des logos de l'accueil en fontion de son ration
+	 */
 	function updateRatioClass() {
 		var imgLogos = document.querySelectorAll(".home--graph-logo");
 		var _i = -1,
