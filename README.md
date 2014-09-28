@@ -12,6 +12,6 @@ L'animation du logo en svg se trouve dans *SkrollrTest*
 ##To Do
 * [ ] Intégrer les templates
 * [x] Faire l'animation du logo
-* [ ] Incorporer l'animation du logo
-* [ ] Incorporer l'effet de parallaxe
+* [x] Incorporer l'animation du logo
+* [x] Incorporer l'effet de parallaxe
 * [ ] Gestionnaire de page de projets
