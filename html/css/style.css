@@ -237,17 +237,23 @@ a:hover {
   font-size: 1.2em;
   line-height: 2em;
 }
+@media screen and (max-width: 960px) {
+  /* line 9, ../sass/layout/_home.sass */
+  .home article {
+    padding: 0 20px;
+  }
+}
 
-/* line 20, ../sass/layout/_home.sass */
+/* line 22, ../sass/layout/_home.sass */
 .home--dev {
   background: url(../img/dev.png) repeat-x 20% 100%;
 }
 @media screen and (max-width: 960px) {
-  /* line 20, ../sass/layout/_home.sass */
+  /* line 22, ../sass/layout/_home.sass */
   .home--dev {
     background: url(../img/dev-bg.png);
   }
-  /* line 24, ../sass/layout/_home.sass */
+  /* line 26, ../sass/layout/_home.sass */
   .home--dev article {
     width: 100%;
     float: left;
@@ -255,7 +261,7 @@ a:hover {
     margin-right: 0;
   }
 }
-/* line 26, ../sass/layout/_home.sass */
+/* line 28, ../sass/layout/_home.sass */
 .home--dev article {
   margin-left: 44.3038%;
   width: 55.6962%;
@@ -263,82 +269,127 @@ a:hover {
   margin-right: 0;
   color: #fff;
 }
+@media screen and (max-width: 960px) {
+  /* line 28, ../sass/layout/_home.sass */
+  .home--dev article {
+    margin-left: 0%;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
-/* line 33, ../sass/layout/_home.sass */
+/* line 38, ../sass/layout/_home.sass */
 .home--graph article ul {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 2em;
   text-align: center;
 }
-/* line 37, ../sass/layout/_home.sass */
+/* line 42, ../sass/layout/_home.sass */
 .home--graph article ul li {
-  float: left;
-  margin-right: 12px;
+  display: inline-block;
 }
-/* line 40, ../sass/layout/_home.sass */
-.home--graph article ul li .home--graph__carre {
+/* line 44, ../sass/layout/_home.sass */
+.home--graph article ul li.home--graph__carre {
   width: 17.72152%;
   float: left;
   margin-right: 1.26582%;
 }
-/* line 42, ../sass/layout/_home.sass */
-.home--graph article ul li .home--graph__rectangle {
+/* line 46, ../sass/layout/_home.sass */
+.home--graph article ul li.home--graph__rectangle {
   width: 43.03797%;
   float: left;
   margin-right: 1.26582%;
 }
-/* line 44, ../sass/layout/_home.sass */
+/* line 48, ../sass/layout/_home.sass */
 .home--graph article ul li figure {
-  height: 200px;
+  height: 150px;
   background: #e0e0e0;
 }
-/* line 47, ../sass/layout/_home.sass */
+/* line 51, ../sass/layout/_home.sass */
 .home--graph article ul li figure img {
   height: 100%;
   padding: 20px;
 }
-/* line 50, ../sass/layout/_home.sass */
-.home--graph article ul li + li + li + li {
+/* line 54, ../sass/layout/_home.sass */
+.home--graph article ul li:first-child + li + li + li {
   margin-right: 0;
 }
-
-/* line 53, ../sass/layout/_home.sass */
-.home--photo {
-  height: 700px;
+@media screen and (max-width: 960px) {
+  /* line 57, ../sass/layout/_home.sass */
+  .home--graph article ul li {
+    margin-bottom: 30px;
+  }
+  /* line 59, ../sass/layout/_home.sass */
+  .home--graph article ul li.home--graph__carre {
+    width: 47.36842%;
+    float: left;
+    margin-right: 5.26316%;
+  }
+  /* line 61, ../sass/layout/_home.sass */
+  .home--graph article ul li.home--graph__rectangle {
+    width: 47.36842%;
+    float: left;
+    margin-right: 5.26316%;
+  }
+  /* line 63, ../sass/layout/_home.sass */
+  .home--graph article ul li:first-child + li {
+    margin-right: 0;
+  }
 }
-/* line 55, ../sass/layout/_home.sass */
+
+/* line 66, ../sass/layout/_home.sass */
+.home--photo {
+  height: 600px;
+  overflow: hidden;
+}
+/* line 69, ../sass/layout/_home.sass */
 .home--photo figure {
-  height: 700px;
+  min-width: 1280px;
+  height: 600px;
   width: 100%;
+  margin: 0 auto;
   position: absolute;
+  right: 0;
   z-index: 1;
   overflow: hidden;
 }
-/* line 61, ../sass/layout/_home.sass */
+/* line 78, ../sass/layout/_home.sass */
 .home--photo figure video {
   width: 100%;
   background-image: url(../misc/img-home/poster-video.jpg);
 }
-/* line 64, ../sass/layout/_home.sass */
+/* line 81, ../sass/layout/_home.sass */
 .home--photo article {
   width: 55.6962%;
   float: left;
   margin-right: 1.26582%;
-  text-align: left;
   position: relative;
   z-index: 1;
   color: #fff;
+  text-align: left;
   text-shadow: 1px 1px 2px #000;
 }
+@media screen and (max-width: 960px) {
+  /* line 89, ../sass/layout/_home.sass */
+  .home--photo article {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+}
 
-/* line 72, ../sass/layout/_home.sass */
+/* line 93, ../sass/layout/_home.sass */
 .home--divider {
   height: 400px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 75, ../sass/layout/_home.sass */
+/* line 96, ../sass/layout/_home.sass */
 .home--divider img {
   position: relative;
   bottom: 25%;

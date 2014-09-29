@@ -16,6 +16,8 @@
         p
             font-size: 1.2em
             line-height: 2em
+        @media screen and (max-width: $width-large)
+            padding: 0 20px
 
 .home--dev
     background: url(../img/dev.png) repeat-x 20% 100%
@@ -27,6 +29,9 @@
         +pre(7 of 16)
         +span(9 of 16 last)
         color: #fff
+        @media screen and (max-width: $width-large)
+            +pre(0)
+            +span(1 of 1)
 
 .home--graph
     article
@@ -35,27 +40,39 @@
             margin-bottom: 2em
             text-align: center
             li
-                float: left
-                margin-right: 12px
-                & .home--graph__carre
+                display: inline-block
+                &.home--graph__carre
                     +span(3 of 16)
-                & .home--graph__rectangle
+                &.home--graph__rectangle
                     +span(7 of 16)
                 figure
-                    height: 200px
+                    height: 150px
                     background: #e0e0e0
                     img
                         height: 100%
                         padding: 20px
-                &+li+li+li
+                &:first-child+li+li+li
                     margin-right: 0
+            @media screen and (max-width: $width-large)
+                li
+                    margin-bottom: 30px
+                    &.home--graph__carre
+                        +span(2 of 4)
+                    &.home--graph__rectangle
+                        +span(2 of 4)
+                    &:first-child+li
+                        margin-right: 0
 
 .home--photo
-    height: 700px
+    height: 600px
+    overflow: hidden
     figure
-        height: 700px
+        min-width: 1280px
+        height: 600px
         width: 100%
+        margin: 0 auto
         position: absolute
+        right: 0
         z-index: 1
         overflow: hidden
         video
@@ -63,11 +80,15 @@
             background-image: url(../misc/img-home/poster-video.jpg)
     article
         +span(9 of 16)
-        text-align: left
         position: relative
         z-index: 1
         color: #fff
+        text-align: left
         +single-text-shadow(1px, 1px, 2px, false, #000)
+    @media screen and (max-width: $width-large)
+        article
+            +span (1 of 1)
+            text-align: center
 
 .home--divider
     height: 400px
