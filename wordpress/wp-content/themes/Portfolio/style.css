@@ -1,3 +1,18 @@
+/*
+Theme Name: Portfolio
+Author: Luc Matagne
+Author URI: http://lucmatagne.be
+Description: Thème pour mon portfolio
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.&0.html
+Tags: portfolio
+Text Domain: portfolio
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 /**
  * SMACSS + SCSS starter v2.0
  * Inspired by SMACSS http://smacss.com
@@ -246,12 +261,12 @@ a:hover {
 
 /* line 22, ../sass/layout/_home.sass */
 .home--dev {
-  background: url(../img/dev.png) repeat-x 20% 100%;
+  background: url(img/dev.png) repeat-x 20% 100%;
 }
 @media screen and (max-width: 960px) {
   /* line 22, ../sass/layout/_home.sass */
   .home--dev {
-    background: url(../img/dev-bg.png);
+    background: url(img/dev-bg.png);
   }
   /* line 26, ../sass/layout/_home.sass */
   .home--dev article {
@@ -402,7 +417,7 @@ a:hover {
  */
 /* line 6, ../sass/layout/_header.sass */
 .header {
-  background-image: url(../img/header-bg.png);
+  background-image: url(img/header-bg.png);
   background-position: center center;
   padding-top: 50px;
 }
@@ -418,7 +433,7 @@ a:hover {
   width: 11.39241%;
   float: left;
   margin-right: 1.26582%;
-  background: url(../img/logo.png) no-repeat center center;
+  background: url(img/logo.png) no-repeat center center;
   height: 70px;
   text-indent: 9999px;
   margin-bottom: 60px;
@@ -555,7 +570,7 @@ a:hover {
 .menu--fix {
   position: fixed;
   top: -50px;
-  background: url(../img/header-bg.png) center bottom no-repeat;
+  background: url(img/header-bg.png) center bottom no-repeat;
 }
 /* line 49, ../sass/layout/_nav.sass */
 .menu--fix .menu--link {
@@ -585,19 +600,19 @@ a:hover {
 }
 /* line 19, ../sass/layout/_footer.sass */
 .footer-socials a.footer-socials-fb {
-  background-image: url(../img/fb-icon.png);
+  background-image: url(img/fb-icon.png);
 }
 /* line 21, ../sass/layout/_footer.sass */
 .footer-socials a.footer-socials-twitter {
-  background-image: url(../img/twitter-icon.png);
+  background-image: url(img/twitter-icon.png);
 }
 /* line 23, ../sass/layout/_footer.sass */
 .footer-socials a.footer-socials-linkedin {
-  background-image: url(../img/linkedin-icon.png);
+  background-image: url(img/linkedin-icon.png);
 }
 /* line 25, ../sass/layout/_footer.sass */
 .footer-socials a.footer-socials-youtube {
-  background-image: url(../img/youtube-icon.png);
+  background-image: url(img/youtube-icon.png);
 }
 
 /* line 27, ../sass/layout/_footer.sass */
