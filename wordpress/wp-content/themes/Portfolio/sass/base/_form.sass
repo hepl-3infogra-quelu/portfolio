@@ -1,0 +1,50 @@
+/* ===========================
+ * Form
+ * ===========================
+ */
+
+.form
+    +container(700px)
+    text-align: left
+    color: #b4bbc2
+    .form--input, .form--textarea
+        margin-bottom: 30px
+        label
+            display: block
+            margin-bottom: 15px
+        input, textarea
+            border: 1px solid #b4bbc2
+            padding: 10px
+            width: 100%
+            z-index: -20
+            outline: none
+            height: 45px
+            +border-radius(5px)
+            &:focus
+                border-width: 2px
+    .form--narrow
+        +span(2 of 4)
+        &+.form--narrow
+            margin-right: 0
+    .form--large
+        +span(1 of 1)
+    .form--textarea
+        textarea
+            resize: vertical
+            width: 100%
+            min-height: 140px
+    .form--actions
+        div
+            line-height: 40px
+            float: left
+        input[type=submit]
+            font-weight: bold
+            font-size: 1.1em
+            background-color: #24aa98
+            padding: 15px 30px
+            cursor: pointer
+            float: right
+            color: #fff
+            outline: none
+            +border-radius(10px)
+            border: 0
