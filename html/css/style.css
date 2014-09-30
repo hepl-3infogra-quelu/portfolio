@@ -385,7 +385,7 @@ a:hover {
 
 /* line 93, ../sass/layout/_home.sass */
 .home--divider {
-  height: 400px;
+  height: 800px;
   overflow: hidden;
   *zoom: 1;
 }
