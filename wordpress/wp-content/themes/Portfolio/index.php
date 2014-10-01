@@ -1,10 +1,17 @@
-<?php get_header() ?>
+<?php
+    $the_query = new WP_Query([
+        'p'         => '21',
+        'post_type' => 'misc'
+    ]);
+    get_header();
+ ?>
         <section class="home home--dev" data-200-bottom="background-position: 20% 100%" data--1000-top="background-position: 20% 50%">
             <div class="container">
                 <article>
-                    <h2>Le développement web</h2>
-                    <p>Je réalise des sites web de A à Z !</p>
-                    <p>Sur base de votre demande je vous crée votre propre site Internet adapté à vos besoins mais aussi et surtout à ceux de vos utilisateurs !</p>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post() ?>
+                        <h2><?php the_field('title_bloc1') ?></h2>
+                        <?php the_field('content_bloc1') ?>
+                    <?php endwhile ?>
                 </article>
             </div>
         </section>
@@ -28,9 +35,10 @@
                         <figure><img src="<?php echo get_template_directory_uri() ?>/misc/img-home/logo04.png" alt="Logo de Boldas constructi on" class="home--graph-logo"></figure>
                     </li>
                 </ul>
-                <h2>Graphisme</h2>
-                <p>Vous avez besoin d'une nouvelle identité graphique ? Un flyer ou une affiche ? </p>
-                <p>Je peux également vous aider dans ce domaine ! ;)</p>
+                <?php while ($the_query->have_posts()) : $the_query->the_post() ?>
+                    <h2><?php the_field('title_bloc2') ?></h2>
+                    <?php the_field('content_bloc2') ?>
+                <?php endwhile ?>
             </article>
         </section>
         <div class="home--divider" title="Photo réalisée par Luc Matagne">
@@ -45,10 +53,10 @@
         </figure>
             <div class="container">
                 <article>
-                    <h2>Photographie & vidéo</h2>
-                    <p>Vous organisez un meeting, un événement d'entreprise ou vous êtes sur le point de vous marier? Vous avez besoin d'un photographe pour immortaliser ces moments !</p>
-                    <p>Ça tombe bien car je peux vous aider !</p>
-                    <p>Mais encore mieux, je réalise aussi des vidéos de qualité professionelle de la prise de vue au montage.</p>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post() ?>
+                        <h2><?php the_field('title_bloc3') ?></h2>
+                        <?php the_field('content_bloc3') ?>
+                    <?php endwhile ?>
                 </article>
             </div>
         </section>

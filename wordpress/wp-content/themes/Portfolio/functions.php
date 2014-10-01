@@ -4,16 +4,34 @@ add_action( 'init', 'create_post_type' );
 add_action( 'init', 'create_creation_tax' );
 
 function create_post_type() {
-  register_post_type( 'creation',
-    array(
-      'labels' => array(
-        'name' => __( 'Créations' ),
-        'singular_name' => __( 'Creation' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
+    /**
+     * Post type creation
+     * ===================
+     */
+    register_post_type( 'creation',
+        array(
+            'labels' => array(
+                'name' => __( 'Créations' ),
+                'singular_name' => __( 'Creation' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+
+    /**
+     * Post type misc
+     * ==============
+     */
+    register_post_type( 'misc',
+        array(
+            'labels' => array(
+                'name' => __( 'Divers' ),
+                'singular_name' => __( 'misc' )
+            ),
+            'public' => true
+        )
+    );
 }
 
 function create_creation_tax() {
