@@ -7,6 +7,7 @@
                 </nav>
                 <div class="footer-copyright">© Luc Matagne 2014 - Tous droits réservés</div>
         </footer>
+        </div>
         <script src="<?php echo get_template_directory_uri() ?>/js/vendor/skrollr.min.js"></script>
         <script type="text/javascript">
             var s = skrollr.init();
