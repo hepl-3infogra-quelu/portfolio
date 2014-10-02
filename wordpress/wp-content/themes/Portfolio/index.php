@@ -1,6 +1,6 @@
 <?php
     $the_query = new WP_Query([
-        'p'         => '21',
+        'p'         => '7',
         'post_type' => 'misc'
     ]);
     get_header();
