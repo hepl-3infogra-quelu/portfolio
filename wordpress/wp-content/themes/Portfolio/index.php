@@ -1,8 +1,17 @@
 <?php
-$the_query = new WP_Query( [
-                               'p'         => '7',
-                               'post_type' => 'misc'
-                           ]
+$the_query   = new WP_Query( [
+                                 'p'         => '7',
+                                 'post_type' => 'misc'
+                             ]
+);
+$logos_query = new WP_Query( [
+                                 'post_type' => 'creation',
+                                 'post_limit' => 2,
+                                 'tax_query' => [
+                                     'taxonomy' => 'type',
+                                     'terms'    => 'logo'
+                                 ]
+                             ]
 );
 get_header ();
 ?>
@@ -24,23 +33,32 @@ get_header ();
 
 <section class="home home--graph container">
     <article>
+
         <ul>
-            <li>
-                <figure><img src="<?php echo get_template_directory_uri () ?>/misc/img-home/logo01.png" alt="Logo ECV"
-                             class="home--graph-logo"></figure>
-            </li>
-            <li>
-                <figure><img src="<?php echo get_template_directory_uri () ?>/misc/img-home/logo02.png"
+            <?php
+            while ($logos_query->have_posts ()): $logos_query->the_post ();
+                $logo = get_field ( 'creation_file' );
+                ?>
+                <li>
+                    <figure>
+                        <img src="<?php echo $logo[ 'url' ] ?>"
+                             alt="<?php echo $logo[ 'title' ] ?>"
+                             class="home--graph-logo">
+                    </figure>
+                </li>
+            <?php endwhile ?>
+            <!--<li>
+                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo02.png"
                              alt="Logo de Library" class="home--graph-logo"></figure>
             </li>
             <li>
-                <figure><img src="<?php echo get_template_directory_uri () ?>/misc/img-home/logo03.png"
+                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo03.png"
                              alt="Logo de Smily Panda" class="home--graph-logo"></figure>
             </li>
             <li>
-                <figure><img src="<?php echo get_template_directory_uri () ?>/misc/img-home/logo04.png"
+                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo04.png"
                              alt="Logo de Boldas constructi on" class="home--graph-logo"></figure>
-            </li>
+            </li>-->
         </ul>
         <?php while ($the_query->have_posts ()) : $the_query->the_post () ?>
             <h2><?php the_field ( 'title_bloc2' ) ?></h2>
