@@ -1,17 +1,25 @@
 <?php
-$the_query   = new WP_Query( [
-                                 'p'         => '7',
-                                 'post_type' => 'misc'
-                             ]
+$the_query    = new WP_Query( [
+                                  'p'         => '7',
+                                  'post_type' => 'misc'
+                              ]
 );
-$logos_query = new WP_Query( [
-                                 'post_type' => 'creation',
-                                 'post_limit' => 2,
-                                 'tax_query' => [
-                                     'taxonomy' => 'type',
-                                     'terms'    => 'logo'
-                                 ]
-                             ]
+$logos_query  = new WP_Query( [
+                                  'post_type'  => 'creation',
+                                  'post_limit' => 2, // Trouver la bonne propriété
+                                  'tax_query'  => [
+                                      'taxonomy' => 'type',
+                                      'terms'    => 'logo'
+                                  ]
+                              ]
+);
+$photos_query = new WP_Query( [
+                                  'post_type' => 'creation',
+                                  'tax_query' => [
+                                      'taxonomy' => 'type',
+                                      'terms'    => 'photographie'
+                                  ]
+                              ]
 );
 get_header ();
 ?>
@@ -27,8 +35,13 @@ get_header ();
     </div>
 </section>
 <div class="home--divider" title="Photo réalisée par Luc Matagne">
-    <img src="<?php echo get_template_directory_uri () ?>/misc/img-home/sep01.jpg" alt="Photo shooting homestuck"
-         data-1200-bottom="bottom: 75%" data--1200-top="bottom: 0%">
+    <?php
+    while ($photos_query->have_posts ()): $photos_query->the_post ();
+        $photo = get_field ( 'creation_file' );
+        ?>
+        <img src="<?php echo $photo[ 'url' ] ?>" alt="<?php echo $photo[ 'title' ] ?>"
+             data-1200-bottom="bottom: 75%" data--1200-top="bottom: 0%">
+    <?php endwhile ?>
 </div>
 
 <section class="home home--graph container">
