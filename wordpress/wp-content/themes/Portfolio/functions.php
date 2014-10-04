@@ -9,14 +9,14 @@ function create_post_type() {
      * ===================
      */
     register_post_type( 'creation',
-        array(
-            'labels' => array(
+        [
+            'labels' => [
                 'name' => __( 'Créations' ),
                 'singular_name' => __( 'Creation' )
-            ),
+            ],
             'public' => true,
             'has_archive' => true,
-        )
+        ]
     );
 
     /**
@@ -24,18 +24,18 @@ function create_post_type() {
      * ==============
      */
     register_post_type( 'misc',
-        array(
-            'labels' => array(
+        [
+            'labels' => [
                 'name' => __( 'Divers' ),
                 'singular_name' => __( 'misc' )
-            ),
+            ],
             'public' => true
-        )
+        ]
     );
 }
 
 function create_creation_tax() {
-    $type_labels = array(
+    $type_labels = [
         'name'                       => _x( 'Types de travail', 'taxonomy general name' ),
         'singular_name'              => _x( 'Type', 'taxonomy singular name' ),
         'search_items'               => __( 'Rechercher un type' ),
@@ -50,15 +50,15 @@ function create_creation_tax() {
         'choose_from_most_used'      => __( 'Choisir parmis les types les plus fréquents' ),
         'not_found'                  => __( 'Pas de type trouvé.' ),
         'menu_name'                  => __( 'Types de travail' )
-    );
-    $type_args = array(
+    ];
+    $type_args = [
         'hierarchical'          => false,
         'labels'                => $type_labels,
         'show_ui'               => true,
-        'rewrite'               => array( 'slug' => 'type' )
-    );
+        'rewrite'               => [ 'slug' => 'type' ]
+    ];
 
-    $tech_labels = array(
+    $tech_labels = [
         'name'                       => _x( 'Technologies', 'taxonomy general name' ),
         'singular_name'              => _x( 'Technologie', 'taxonomy singular name' ),
         'search_items'               => __( 'Rechercher une technologie' ),
@@ -73,13 +73,13 @@ function create_creation_tax() {
         'choose_from_most_used'      => __( 'Choisir parmis les technologies les plus fréquentes' ),
         'not_found'                  => __( 'Pas de technologie trouvée.' ),
         'menu_name'                  => __( 'Technologies' )
-    );
-    $tech_args = array(
+    ];
+    $tech_args = [
         'hierarchical'          => false,
         'labels'                => $tech_labels,
         'show_ui'               => true,
-        'rewrite'               => array( 'slug' => 'tech' )
-    );
+        'rewrite'               => [ 'slug' => 'tech' ]
+    ];
 
     register_taxonomy( 'type', 'creation', $type_args );
     register_taxonomy( 'tech', 'creation', $tech_args );
