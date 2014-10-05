@@ -5,22 +5,24 @@ $the_query    = new WP_Query( [
                               ]
 );
 $logos_query  = new WP_Query( [
-                                  'post_type'  => 'creation',
-                                  'post_limit' => 2, // Trouver la bonne propriété
-                                  'tax_query'  => [
-                                      'taxonomy' => 'type',
-                                      'terms'    => 'logo'
-                                  ]
+                                  'post_type'      => 'creation',
+                                  'posts_per_page' => 4,
+                                  'orderby'        => 'rand',
+                                  'type'           => 'logo'
                               ]
 );
 $photos_query = new WP_Query( [
                                   'post_type' => 'creation',
-                                  'tax_query' => [
-                                      'taxonomy' => 'type',
-                                      'terms'    => 'photographie'
-                                  ]
+                                  'posts_per_page' => 2,
+                                  'orderby'        => 'rand',
+                                  'type'      => 'photographie'
                               ]
 );
+while ($photos_query->have_posts ())
+{
+    $photos_query->the_post ();
+    $photos[ ] = get_field ( 'creation_file' );
+}
 get_header ();
 ?>
 <section class="home home--dev" data-200-bottom="background-position: 20% 100%"
@@ -35,18 +37,12 @@ get_header ();
     </div>
 </section>
 <div class="home--divider" title="Photo réalisée par Luc Matagne">
-    <?php
-    while ($photos_query->have_posts ()): $photos_query->the_post ();
-        $photo = get_field ( 'creation_file' );
-        ?>
-        <img src="<?php echo $photo[ 'url' ] ?>" alt="<?php echo $photo[ 'title' ] ?>"
-             data-1200-bottom="bottom: 75%" data--1200-top="bottom: 0%">
-    <?php endwhile ?>
+    <img src="<?php echo $photos[ 0 ][ 'url' ] ?>" alt="<?php echo $photos[ 0 ][ 'title' ] ?>"
+         data-1200-bottom="bottom: 75%" data--1200-top="bottom: 0%">
 </div>
 
 <section class="home home--graph container">
     <article>
-
         <ul>
             <?php
             while ($logos_query->have_posts ()): $logos_query->the_post ();
@@ -60,18 +56,6 @@ get_header ();
                     </figure>
                 </li>
             <?php endwhile ?>
-            <!--<li>
-                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo02.png"
-                             alt="Logo de Library" class="home--graph-logo"></figure>
-            </li>
-            <li>
-                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo03.png"
-                             alt="Logo de Smily Panda" class="home--graph-logo"></figure>
-            </li>
-            <li>
-                <figure><img src="<?php /*echo get_template_directory_uri () */ ?>/misc/img-home/logo04.png"
-                             alt="Logo de Boldas constructi on" class="home--graph-logo"></figure>
-            </li>-->
         </ul>
         <?php while ($the_query->have_posts ()) : $the_query->the_post () ?>
             <h2><?php the_field ( 'title_bloc2' ) ?></h2>
@@ -80,7 +64,7 @@ get_header ();
     </article>
 </section>
 <div class="home--divider" title="Photo réalisée par Luc Matagne">
-    <img src="<?php echo get_template_directory_uri () ?>/misc/img-home/sep02.jpg" alt="Photo shooting couple"
+    <img src="<?php echo $photos[ 1 ][ 'url' ] ?>" alt="<?php echo $photos[ 1 ][ 'title' ] ?>"
          data-1200-bottom="bottom: 75%" data--1200-top="bottom: 0%">
 </div>
 
