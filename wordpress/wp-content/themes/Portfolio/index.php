@@ -75,7 +75,7 @@ get_header ();
         </video>
     </figure>
     <div class="container">
-        <article>""
+        <article>
             <?php while ($the_query->have_posts ()) : $the_query->the_post () ?>
                 <h2><?php the_field ( 'title_bloc3' ) ?></h2>
                 <?php the_field ( 'content_bloc3' ) ?>

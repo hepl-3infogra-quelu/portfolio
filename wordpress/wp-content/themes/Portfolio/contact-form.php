@@ -86,45 +86,52 @@ if (isset( $emailSent ) && $emailSent == true)
     if (isset( $hasError ))
     {
         ?>
-        <p class="form--error">Ah ! Vous avez du oublier de remplir un des champs correctement.</p>
+        <h2>Ah ! Vous avez du oublier de remplir un des champs correctement.</h2>
     <?php } ?>
 
-    <h2>Besoin d'aide ? Contactez moi !</h2>
+    <?php
+    if (!isset( $hasError ))
+    {
+        ?>
+        <h2>Besoin d'aide ? Contactez moi !</h2>
+    <?php } ?>
 
     <form action="#contact" class="form" method="post">
-        <div class="form--input form--narrow">
+        <div class="form--input form--narrow<?php echo ( isset( $nameError ) ) ? ' form--error' : ''
+        ?>">
             <label for="name">Nom</label>
             <input type="text" name="name" id="name"
                    value="<?php echo ( isset( $_POST[ 'name' ] ) ) ? $_POST[ 'name' ] : '' ?>">
-            <?php if ($nameError != '') : ?>
-                <span class="form--error"><? echo $nameError ?></span>
+            <?php if (isset( $nameError )) : ?>
+                <span><? echo $nameError ?></span>
             <?php endif ?>
         </div>
 
-        <div class="form--input form--narrow">
+        <div class="form--input form--narrow<?php echo ( isset( $emailError ) ) ? ' form--error' : ''
+        ?>">
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email" placeholder="youremail@domain.com"
                    value="<?php echo ( isset( $_POST[ 'email' ] ) ) ? $_POST[ 'email' ] : '' ?>">
-            <?php if ($emailError != '') : ?>
-                <span class="form--error"><? echo $emailError ?></span>
+            <?php if (isset( $emailError )) : ?>
+                <span><? echo $emailError ?></span>
             <?php endif ?>
         </div>
 
-        <div class="form--input form-large">
+        <div class="form--input form-large<?php echo ( isset( $subjectError ) ) ? ' form--error' : '' ?>">
             <label for="subject">Sujet</label>
             <input type="text" name="subject" id="subject"
                    value="<?php echo ( isset( $_POST[ 'subject' ] ) ) ? $_POST[ 'subject' ] : '' ?>">
-            <?php if ($subjectError != '') : ?>
-                <span class="form--error"><? echo $subjectError ?></span>
+            <?php if (isset( $subjectError )) : ?>
+                <span><? echo $subjectError ?></span>
             <?php endif ?>
         </div>
 
-        <div class="form--textarea">
+        <div class="form--textarea<?php echo ( isset( $contentError ) ) ? ' form--error' : '' ?>">
             <label for="content">Message</label>
             <textarea name="content" id="content" cols="30" rows="10"><?php echo ( isset( $_POST[ 'content' ] ) )
-                    ? stripslashes ( [ 'content' ] ) : '' ?></textarea>
-            <?php if ($contentError != '') : ?>
-                <span class="form--error"><? echo $contentError ?></span>
+                    ? stripslashes ( $_POST[ 'content' ] ) : '' ?></textarea>
+            <?php if (isset( $contentError )) : ?>
+                <span><? echo $contentError ?></span>
             <?php endif ?>
         </div>
 
