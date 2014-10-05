@@ -75,45 +75,18 @@ get_header ();
         </video>
     </figure>
     <div class="container">
-        <article>
+        <article>""
             <?php while ($the_query->have_posts ()) : $the_query->the_post () ?>
                 <h2><?php the_field ( 'title_bloc3' ) ?></h2>
                 <?php the_field ( 'content_bloc3' ) ?>
             <?php endwhile ?>
+            <span id="contact"></span>
         </article>
     </div>
 </section>
-
 <section class="home home--contact container">
     <article>
-        <h2>Besoin d'aide ? Contactez moi !</h2>
-
-        <form action="#" class="form" method="post">
-            <div class="form--input form--narrow">
-                <label for="name">Nom</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="form--input form--narrow">
-                <label for="email">E-mail</label>
-                <input type="text" name="email" id="email" placeholder="youremail@domain.com">
-            </div>
-            <div class="form--input form-large">
-                <label for="subject">Sujet</label>
-                <input type="text" name="subject" id="subject">
-            </div>
-            <div class="form--textarea">
-                <label for="content">Message</label>
-                <textarea name="content" id="content" cols="30" rows="10"></textarea>
-            </div>
-            <div class="form--actions">
-                <div>
-                    <input type="hidden" name="sendCopy" value="0">
-                    <input type="checkbox" name="sendCopy" id="sendCopy" value="1">
-                    <label for="sendCopy">M'envoyer une copie</label>
-                </div>
-                <input type="submit" value="Envoyer">
-            </div>
-        </form>
+        <?php include 'contact-form.php' ?>
     </article>
 </section>
 <?php get_footer () ?>
