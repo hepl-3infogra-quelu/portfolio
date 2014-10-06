@@ -4,7 +4,6 @@
 if (isset( $_POST[ 'submitted' ] ))
 {
 
-
     // Vérifier que le champs "nom" n'est pas vide
     if (trim ( $_POST[ 'name' ] ) === '')
     {
@@ -65,8 +64,9 @@ if (isset( $_POST[ 'submitted' ] ))
 
         $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" . 'From: no-reply <no-reply@luc-matagne.be>';
 
-        if (isset( $sendCopy ))
+        if (isset( $_POST[ 'sendCopy' ] ) && $_POST[ 'sendCopy' ] == true)
         {
+
             mail ( $email, $subject, $body, $headers );
         }
 
