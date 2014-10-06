@@ -69,7 +69,6 @@ if (isset( $_POST[ 'submitted' ] ))
         {
             mail ( $email, $subject, $body, $headers );
         }
-        $headers = 'De : ';
 
         $emailSent = true;
     }
