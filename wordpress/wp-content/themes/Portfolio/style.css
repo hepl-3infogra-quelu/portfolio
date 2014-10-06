@@ -78,6 +78,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 11, sass/tools/_site-settings.sass */
+attr {
+  cursor: help;
+}
+
 /* line 14, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -194,16 +199,16 @@ a:hover {
   border-radius: 10px;
   border: 0;
 }
-/* line 52, sass/base/_form.sass */
-.form .form--error {
-  background-color: #f29f97;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+/* line 53, sass/base/_form.sass */
+.form .form--error input, .form .form--error textarea {
+  border-color: #e74c3c;
 }
 /* line 55, sass/base/_form.sass */
 .form .form--error span {
+  display: block;
+  margin-top: 10px;
   color: #e74c3c;
+  font-size: 0.8em;
 }
 
 /* ===========================

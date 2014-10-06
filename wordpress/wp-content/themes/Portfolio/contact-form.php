@@ -12,7 +12,7 @@ if (isset( $_POST[ 'submitted' ] ))
         $hasError  = true;
     } else
     {
-        $name = trim ( $_POST[ 'name' ] );
+        $name = stripslashes ( $_POST[ 'name' ] );
     }
 
     // Vérifier que le champs "sujet" n'est pas vide
@@ -22,7 +22,7 @@ if (isset( $_POST[ 'submitted' ] ))
         $hasError     = true;
     } else
     {
-        $subject = trim ( $_POST[ 'subject' ] );
+        $subject = stripslashes ( $_POST[ 'subject' ] );
     }
 
     // Vérifier que l'email entré est correct
@@ -56,19 +56,20 @@ if (isset( $_POST[ 'submitted' ] ))
     if (!isset( $hasError ))
     {
 
-        $emailTo  = 'quelumatagne@gmail.com';
-        $subject  = $sujet;
-        $sendCopy = trim ( $_POST[ 'sendCopy' ] );
-        $body     = "Nom: $name \n\nEmail: $email \n\nMessage:\n $content";
-        $headers  = 'De : luc-matagne.be <' . $emailTo . '>' . "\r\n" . 'Répondre à : ' . $email;
+        $emailTo = 'quelumatagne@gmail.com';
+        $body    = nl2br ( $content );
+
+        $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" . 'From: ' . $name . ' <' . $email . '>';
 
         mail ( $emailTo, $subject, $body, $headers );
 
-        if ($sendCopy == true)
+        $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" . 'From: no-reply <no-reply@luc-matagne.be>';
+
+        if (isset( $sendCopy ))
         {
             mail ( $email, $subject, $body, $headers );
         }
-        $headers = 'De : <noreply@luc-matagne.be>';
+        $headers = 'De : ';
 
         $emailSent = true;
     }
@@ -77,16 +78,16 @@ if (isset( $_POST[ 'submitted' ] ))
 if (isset( $emailSent ) && $emailSent == true)
 {
     ?>
-    <h2>Merci, <? echo $name ?></h2>
+    <h2>Merci, <? echo $name ?> !</h2>
 
-    <p>Votre e-mail a été envoyé avec succès. Vous recevrez une réponse sous peu.</p>
+    <p>J'ai bien reçu votre email, je vous réponds <abbr title="As Soon As Possible">ASAP</abbr> ;)</p>
 <?php
 } else
 {
     if (isset( $hasError ))
     {
         ?>
-        <h2>Ah ! Vous avez du oublier de remplir un des champs correctement.</h2>
+        <h2>Ah ! Je pense que vous avez oublié de remplir au moins un des champs correctement.</h2>
     <?php } ?>
 
     <?php

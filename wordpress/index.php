@@ -14,8 +14,5 @@
  */
 define('WP_USE_THEMES', true);
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );

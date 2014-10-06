@@ -14,7 +14,7 @@
             display: block
             margin-bottom: 15px
         input, textarea
-            border: 1px solid #b4bbc2
+            border: 1px solid $text-grey
             padding: 10px
             width: 100%
             z-index: -20
@@ -41,16 +41,19 @@
         input[type=submit]
             font-weight: bold
             font-size: 1.1em
-            background-color: #24aa98
+            background-color: $bg-btn
             padding: 15px 30px
             cursor: pointer
             float: right
-            color: #fff
+            color: $clr-btn
             outline: none
             +border-radius(10px)
             border: 0
     .form--error
-        background-color: lighten(#e74c3c, 20%)
-        +border-radius(10px)
+        input, textarea
+            border-color: $error
         span
-            color: #e74c3c
+            display: block
+            margin-top: 10px
+            color: $error
+            font-size: .8em
