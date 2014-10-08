@@ -21,8 +21,8 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <nav class="menu" id="menu">
-    <a href="#" class="menu--link">A propos</a>
-    <a href="#" class="menu--link">Travaux</a>
+    <a href="<?php echo get_home_url() ?>" class="menu--link">A propos</a>
+    <a href="<?php echo get_home_url() ?>" class="menu--link">Travaux</a>
     <svg id="logoSVG">
         <circle cx="115" cy="115" r="115" fill="#2ecc71"></circle>
         <g transform="translate(200,150), matrix(.8,0,0,-.8,0,0)">
@@ -33,18 +33,18 @@
                 id="path26">
         </g>
     </svg>
-    <a href="#" class="menu--link">Blog</a>
-    <a href="#" class="menu--link">Contact</a>
+    <a href="<?php echo get_home_url() ?>" class="menu--link">Blog</a>
+    <a href="<?php echo get_home_url() ?>/contact" class="menu--link">Contact</a>
 </nav>
 <div id="skrollr-body">
     <header class="header height" id="header">
         <section class="container">
             <h1 class="header-logo"></h1>
             <nav class="header-menu">
-                <a href="#" class="menu--link">A propos</a>
-                <a href="#" class="menu--link">Travaux</a>
-                <a href="#" class="menu--link">Blog</a>
-                <a href="#" class="menu--link">Contact</a>
+                <a href="<?php echo get_home_url() ?>" class="menu--link">A propos</a>
+                <a href="<?php echo get_home_url() ?>" class="menu--link">Travaux</a>
+                <a href="<?php echo get_home_url() ?>" class="menu--link">Blog</a>
+                <a href="<?php echo get_home_url() ?>/contact#con" class="menu--link">Contact</a>
             </nav>
             <div class="header-about">
                 <h1>Luc Matagne</h1>

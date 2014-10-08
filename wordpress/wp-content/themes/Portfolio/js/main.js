@@ -62,15 +62,21 @@
 		}
 	}
 
-	window.onload = function () {
-		update_height();
-		updateRatioClass();
-		document.getElementById("logoSVG").onclick = function () {
-			window.scroll(0, get_height() - 99);
-		};
-	}
+    function goToAnchor() {
+        window.scroll(0, get_height() - 99);
+    }
+
+    window.onload = function () {
+        update_height();
+        updateRatioClass();
+        if(document.getElementById("scrollToAnchor") != null)
+            goToAnchor();
+        document.getElementById("logoSVG").onclick = function () {
+            goToAnchor();
+        };
+	};
 	window.onresize = function () {
-		update_height()
+		update_height();
 	};
 
 	window.onscroll = function () {
