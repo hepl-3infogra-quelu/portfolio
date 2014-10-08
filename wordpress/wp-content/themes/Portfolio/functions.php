@@ -8,29 +8,27 @@ function create_post_type () {
      * Post type creation
      * ===================
      */
-    register_post_type ( 'creation',
-                         [
-                             'labels'      => [
-                                 'name'          => __ ( 'Créations' ),
-                                 'singular_name' => __ ( 'Creation' )
-                             ],
-                             'public'      => true,
-                             'has_archive' => true,
-                         ]
+    register_post_type ( 'creation', [
+            'labels'      => [
+                'name'          => __ ( 'Créations' ),
+                'singular_name' => __ ( 'Creation' )
+            ],
+            'public'      => true,
+            'has_archive' => true,
+        ]
     );
 
     /**
      * Post type misc
      * ==============
      */
-    register_post_type ( 'misc',
-                         [
-                             'labels' => [
-                                 'name'          => __ ( 'Divers' ),
-                                 'singular_name' => __ ( 'misc' )
-                             ],
-                             'public' => true
-                         ]
+    register_post_type ( 'misc', [
+            'labels' => [
+                'name'          => __ ( 'Divers' ),
+                'singular_name' => __ ( 'misc' )
+            ],
+            'public' => true
+        ]
     );
 }
 

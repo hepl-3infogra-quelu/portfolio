@@ -1,22 +1,22 @@
 <?php
 $the_query    = new WP_Query( [
-                                  'p'         => '7',
-                                  'post_type' => 'misc'
-                              ]
+        'p'         => '7',
+        'post_type' => 'misc'
+    ]
 );
 $logos_query  = new WP_Query( [
-                                  'post_type'      => 'creation',
-                                  'posts_per_page' => 4,
-                                  'orderby'        => 'rand',
-                                  'type'           => 'logo'
-                              ]
+        'post_type'      => 'creation',
+        'posts_per_page' => 4,
+        'orderby'        => 'rand',
+        'type'           => 'logo'
+    ]
 );
 $photos_query = new WP_Query( [
-                                  'post_type' => 'creation',
-                                  'posts_per_page' => 2,
-                                  'orderby'        => 'rand',
-                                  'type'      => 'photographie'
-                              ]
+        'post_type'      => 'creation',
+        'posts_per_page' => 2,
+        'orderby'        => 'rand',
+        'type'           => 'photographie'
+    ]
 );
 while ($photos_query->have_posts ())
 {
