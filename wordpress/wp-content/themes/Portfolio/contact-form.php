@@ -9,7 +9,8 @@ if (isset( $_POST[ 'submitted' ] ))
     {
         $nameError = 'Vous avez oublié de me dire votre nom.';
         $hasError  = true;
-    } else
+    }
+    else
     {
         $name = stripslashes ( $_POST[ 'name' ] );
     }
@@ -19,7 +20,8 @@ if (isset( $_POST[ 'submitted' ] ))
     {
         $subjectError = 'De quoi voulez-vous me parler ?';
         $hasError     = true;
-    } else
+    }
+    else
     {
         $subject = stripslashes ( $_POST[ 'subject' ] );
     }
@@ -29,13 +31,15 @@ if (isset( $_POST[ 'submitted' ] ))
     {
         $emailError = 'Je ne pourrais pas vous répondre si vous ne me donnez pas votre adresse.';
         $hasError   = true;
-    } else
+    }
+    else
     {
         if (!filter_var ( trim ( $_POST[ 'email' ] ), FILTER_VALIDATE_EMAIL ))
         {
             $emailError = 'Adresse e-mail invalide.';
             $hasError   = true;
-        } else
+        }
+        else
         {
             $email = trim ( $_POST[ 'email' ] );
         }
@@ -46,7 +50,8 @@ if (isset( $_POST[ 'submitted' ] ))
     {
         $contentError = 'Vous avez oublié ce que vous vouliez me dire ?';
         $hasError     = true;
-    } else
+    }
+    else
     {
         $content = stripslashes ( trim ( $_POST[ 'content' ] ) );
     }
@@ -81,7 +86,8 @@ if (isset( $emailSent ) && $emailSent == true)
 
     <p>J'ai bien reçu votre email, je vous réponds <abbr title="As Soon As Possible">ASAP</abbr> ;)</p>
 <?php
-} else
+}
+else
 {
     if (isset( $hasError ))
     {
@@ -128,8 +134,8 @@ if (isset( $emailSent ) && $emailSent == true)
 
         <div class="form--textarea<?php echo ( isset( $contentError ) ) ? ' form--error' : '' ?>">
             <label for="content">Message</label>
-            <textarea name="content" id="content" cols="30" rows="10"><?php echo ( isset( $_POST[ 'content' ] ) )
-                    ? stripslashes ( $_POST[ 'content' ] ) : '' ?></textarea>
+            <textarea name="content" id="content" cols="30"
+                      rows="10"><?php echo ( isset( $_POST[ 'content' ] ) ) ? stripslashes ( $_POST[ 'content' ] ) : '' ?></textarea>
             <?php if (isset( $contentError )) : ?>
                 <span><? echo $contentError ?></span>
             <?php endif ?>
@@ -140,8 +146,8 @@ if (isset( $emailSent ) && $emailSent == true)
                 <input type="hidden" name="submitted" value="true">
                 <input type="checkbox" name="sendCopy" id="sendCopy"
                        value="true"
-                    <?php echo ( isset( $_POST[ 'sendCopy' ] ) && $_POST[ 'sendCopy' ] == true ) ? ' checked="checked"'
-                        : '' ?>>
+                    <?php echo ( isset( $_POST[ 'sendCopy' ] )
+                                 && $_POST[ 'sendCopy' ] == true ) ? ' checked="checked"' : '' ?>>
                 <label for="sendCopy">M'envoyer une copie</label>
             </div>
             <input type="submit" value="Envoyer">
