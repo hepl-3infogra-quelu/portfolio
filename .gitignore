@@ -1,2 +1,5 @@
 wordpress/sftp-config.json
+wordpress/wp-config.php
+wordpress/wp-content/languages/
+wordpress/wp-content/uploads/
 .idea/
